@@ -1,0 +1,23 @@
+*{margin:0;padding:0;}
+body{font-family:'Microsoft Yahei','Simsong';-webkit-user-select:none;-ms-user-select:none;-moz-user-select:none;}
+.clear:after {  content: ".";  display: block;  height: 0;  clear: both;  visibility: hidden; }
+.clear {  display: inline-block; }
+
+#width,#height{width:50px;margin:10px 0;}
+
+.Snake{background-color:#313431; padding:10px;}
+.Snake h2{text-align:center;color:#fff;}
+.game-part{position:relative;float:left;background-color:#737373;}
+.game-part div{position:absolute;background-color:#4a00ae;border-style:solid;border-left-color:#7624be;border-top-color:#a078c3;border-right-color:#391170;border-bottom-color:#250454;}
+
+.other{float:left;margin-left:10px;}
+
+.pause{width:120px;height:30px;line-height:30px;text-align:center;background-color:#737373;cursor:pointer;color:#fff;}
+
+.info-part{width:200px;height:120px;line-height:40px;margin-left:10px;color:#fff;}
+.operations{position:relative;margin-top:20px;line-height:40px;text-align:center;font-size:30px;font-weight:bold;color:#fff;}
+.operations .left,.operations .right,.operations .up,.operations .down{position:absolute;width:40px;height:40px;background-color:#6c6f6c;cursor:pointer;}
+.operations .up{left:40px;top:0;}
+.operations .left{left:0;top:40px;}
+.operations .right{left:80px;top:40px;}
+.operations .down{left:40px;top:80px;}

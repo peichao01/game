@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Snake贪吃蛇</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script type="text/javascript" src="underscore.js"></script>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="jquery.inherit.js"></script>
+<script type="text/javascript" src="jquery-event.js"></script>
+<script type="text/javascript" src="Block.js"></script>
+<script type="text/javascript" src="Snake.js"></script>
+<script type="text/javascript" src="Food.js"></script>
+<script type="text/javascript" src="Information.js"></script>
+<script type="text/javascript" src="Timer.js"></script>
+<script type="text/javascript" src="game.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+		
+	$('#enter').on('click',function(e){
+		game.init($('#width').val(), $('#height').val());
+		$.publish('Snake.game-start');
+	});
+	
+	$('body').on('click','#again',function(){
+		$.publish('Snake.game-start');
+	});
+	
+
+});
+</script>
+</head>
+<body>
+<div id="welcome">
+设置地图的面积：
+<br>
+宽：<input type="text" id="width" value="50" />(格)
+<br>
+高：<input type="text" id="height" value="30" />(格)
+<br>
+<button id="enter">进入游戏</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.clear:after {  content: ".";  display: block;  height: 0;  clear: both;  visibility: hidden; }
+.clear {  display: inline-block; }
+
+.block{
+	float:left;
+	width:19px;
+	height:19px;
+	background-color:#333;
+	border-left:1px solid #999;
+	border-top:1px solid #999;
+}
+
+.tblock{
+	position:absolute;
+	width: 18px;
+	height: 18px;
+	border-top: 1px solid #bdbdbd;
+	border-left: 1px solid #bdbdbd;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #666), color-stop(1, #eee));
+}
+.red{
+	border-top-color:#fa9595;
+	border-left-color:#fa9595;
+	border-right-color:#c80000;
+	border-bottom-color:#c80000;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #c80000), color-stop(1, #fa9595));
+}
+.green{
+	border-top-color:#95e2a0;
+	border-left-color:#95e2a0;
+	border-right-color:#007f0c;
+	border-bottom-color:#007f0c;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #007f0c), color-stop(1, #95e2a0));
+}
+.blue{
+	border-top-color:#cdc7f9;
+	border-left-color:#cdc7f9;
+	border-right-color:#473bc7;
+	border-bottom-color:#473bc7;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #473bc7), color-stop(1, #cdc7f9));
+}
+.purple{
+	border-top-color:#edaaef;
+	border-left-color:#edaaef;
+	border-right-color:#9a10a1;
+	border-bottom-color:#9a10a1;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #9a10a1), color-stop(1, #edaaef));
+}
+.sky{
+	border-top-color:#aef0f7;
+	border-left-color:#aef0f7;
+	border-right-color:#14a3c1;
+	border-bottom-color:#14a3c1;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #14a3c1), color-stop(1, #aef0f7));
+}
+.yellow{
+	border-top-color:#f9f79d;
+	border-left-color:#f9f79d;
+	border-right-color:#c8c100;
+	border-bottom-color:#c8c100;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #c8c100), color-stop(1, #f9f79d));
+}
+.olive{
+	border-top-color:#cfdb83;
+	border-left-color:#cfdb83;
+	border-right-color:#617500;
+	border-bottom-color:#617500;
+	background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #617500), color-stop(1, #cfdb83));
+}
+
+
+.map{
+	position:relative;
+}
+
+.tetris{
+	position:absolute;
+}
+
+.fx-score{
+	position:absolute;
+	left:100px;
+	top:200px;
+	font-size:40px;
+	font-family:'Microsoft Yahei','SimSun';
+	color:transparent;
+	background-color:#f00;
+	-webkit-background-clip: text;
+	text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+}

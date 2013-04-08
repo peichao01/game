@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>扫雷</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script type="text/javascript">
+function wait(moduleNames,callback){
+	callback = arguments[arguments.length-1];
+	setTimeout(function(){
+		var ready = true;
+		for(var i=0,l=arguments.length-1;i<l;i++){
+			if(!scan[arguments[i]]){
+				ready = false;
+				break;
+			}
+		}
+		if(ready){
+			callback();
+		}else{
+			setTimeout(arguments.callee,1);
+		}
+	},1);
+}
+</script>
+<script type="text/javascript" src="underscore.js"></script>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="jquery-event.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="Config.js"></script>
+<script type="text/javascript" src="Bomb.js"></script>
+<script type="text/javascript" src="Grid.js"></script>
+<script type="text/javascript" src="Info.js"></script>
+<script type="text/javascript" src="Resource.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+		
+	var level;
+		
+	$('#enter').on('click',function(e){
+		e.preventDefault();
+		$.each(levelForm.level, function(index,input){
+			if(input.checked){
+				level = input.value;
+				return false;
+			}
+		});
+		
+		$('#welcome').remove();
+		
+		Scan.init(level,$('body')[0]);
+	});
+	
+	$('body').on('click','#again',function(){
+		//newGame();
+	});
+	
+	$(document).bind("contextmenu",function(e){
+          return false;
+    });
+	
+	function newGame(){
+		$('body').empty();
+		Scan.init(level,$('body')[0]);
+	}
+
+});
+</script>
+</head>
+<body>
+<div id="welcome">
+请选择游戏难度级别：
+<form name="levelForm" action="" method="post" id="level-form">
+<input type="radio" id="level1" name="level" value="1" checked="checked" /><label for="level1">初级</label>
+<input type="radio" id="level2" name="level" value="2" /><label for="level2">中级</label>
+<input type="radio" id="level3" name="level" value="3" /><label for="level3">高级</label>
+</form>
+<br>
+<button id="enter">进入游戏</button>
+</div>
+</body>
+</html>

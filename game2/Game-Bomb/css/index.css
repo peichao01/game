@@ -1,0 +1,14 @@
+*{margin:0;padding:0}
+.map{margin:50px 0 0 50px;border-right:1px solid #999;border-bottom:1px solid #999;}
+.map div{width:25px;height:25px;text-align:center;line-height:25px;border-top:1px solid #999;border-left:1px solid #999;float:left;background-color:#ddd;}
+.map div.hover{background-color:#f9f9f9;}
+.map div.turnover{background-color:#fff;}
+.map div.test{background-color:#f60;}
+.map div img{display:block;width:25px;height:25px;}
+.map1{width:234px;height:234px;}
+.map2{width:416px;height:416px;}
+.map3{width:520px;height:520px;}
+
+p{margin:20px 0 0 50px;}
+
+#submit-part{position:absolute;width:400px;height:200px;left:200px;top:50px;background-color:#fff;border:1px solid #999;box-shadow:0 0 10px #ddd;border-radius:10px;z-index:10;}
